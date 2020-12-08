@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="finalProject.css">
+
+
+
+
+
+
+<style>
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+
+
+
+  /* collapsibles*/
+  .collapsible {
+  background-color: rgb(41, 46, 54);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(252, 80, 80);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+    <div id="navbar">
+        <a href="home-gym.html" id="logo">Element Fitness</a>
+        <div id="navbar-right">
+          <a class="active2" href="from2.html">join now</a>
+          <a href="ContactUsGym.html">Contact</a>
+          <a href="aboutGYM.html">About</a>
+          <a href="trainer.html">Trainer</a>
+          <a class="active" href="index.html">Home</a>
+        </div>
+      </div>
+  <img src="gym no pain on gain.jpeg" alt="no pain no gain"  class="center" >
+
+  <h2 style="text-align:center">Slideshow Gallery</h2>
+
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="it safe to be back at the gym.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="slideshow2.jpg" style="width:100%">
+      </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="slideshow3.jpg" style="width:100%">
+    </div>
+      
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="slideshow4 .jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="comunity.jpg" style="width:100%">
+    </div>
+      
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="equopment gym.jpg" style="width:100%">
+    </div>
+      
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="it safe to be back at the gym.jpg" style="width:100%" onclick="currentSlide(1)" alt="Safety First">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="slideshow2.jpg" style="width:100%" onclick="currentSlide(2)" alt="yoga">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="slideshow3.jpg" style="width:87%" onclick="currentSlide(3)" alt="cardio">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="slideshow4 .jpg" style="width:120%" onclick="currentSlide(4)" alt="best of the best trainer">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="comunity.jpg" style="width:110%" onclick="currentSlide(5)" alt="great comunity of people">
+      </div>    
+      <div class="column">
+        <img class="demo cursor" src="equopment gym.jpg" style="width:100%" onclick="currentSlide(6)" alt="newest and latest equitment">
+      </div>
+    </div>
+  </div>
+  
+<!--   collapsibles-->
+<h2>Collapsibles</h2>
+
+<p>our story</p>
+<button type="button" class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p>Gym and Fitness was founded in 2002 as a family owned and operated business. The Gym and Fitness founders didn’t want it to be just another gym equipment retailer - they wanted to be the best in the industry and set their minds to doing so! Since its birth, Gym and Fitness has grown into one of Australia’s largest online fitness equipment retailers having helped over 50,000 customers live longer, happier and healthier lives
+
+  </p>
+</div>
+
+<p>about us:</p>
+<button type="button" class="collapsible">Open Section 1</button>
+<div class="content">
+  <p>
+    at our provides a 24/7 Fitness facility to residents of Martinsville and Henry County, as well as surrounding areas to help people reach and maintain their goals. We combine different types of fitness equipment to meet different fitness needs and levels. 
+  </p>
+</div>
+<button type="button" class="collapsible">Open Section 2</button>
+<div class="content">
+  <p>    
+    At my gym you’ll find all the latest strength and cardio equipment along with a energetic group exercise program that includes POUND, Zumba, Kickboxing, Bootcamp, Muscle Building and many other cardio classes. You’ll find a supportive environment with all kinds of people who are working just as hard as you to meet their goals.
+  </p></div>
+<button type="button" class="collapsible">Open Section 3</button>
+<div class="content">
+  <p>
+    The health and safety of our members and team members has always been our top priority and it’s never been more important. 
+    Our Staff, Trainers & Group exercise instructors are committed to offering our members a great fitness experience. Whether you’re a mom looking to get back into shape, a marathon runner trying to shave a few minutes off your personal best or just trying to stay healthy we would love to help you realize your potential and meet your goals!!
+  </p>
+</div>
+  
+<div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9193.573471970785!2d-73.97858126113566!3d40.7599067477869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x80e1f6b49af3b615!2sGym%20on%205th!5e0!3m2!1sen!2sus!4v1607315595992!5m2!1sen!2sus" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<table border="2px" width="100%"bordercolor="skyblue" bgcolor="red">
+  <tr>
+  <th><font color="white">Designed By Shuhag Khan.</font></th>
+  <td>
+  <table border="2px" width="100%" bordercolor="#F35557">
+  <h4 align="center"><font color="white">Contact US</font></h4>
+  <tr>
+  <th rowspan="2" width="50%" align="center" ><font color="white">5th St, New York, NY 10024.</th>
+  <td width="10%" align="center" ><font color="white">email</font></td>
+  <td width="25%" align="center" ><font color="white"><a href = "mailto: shuhagk222@gmail.com">Shuhagk222@gmail.com</a></font></td>
+  </tr>
+  <tr>
+  <td width="10%" align="center" ><font color="white">phone</font></td>
+  <td width="25%" align="center" ><font color="white">347)555-5555.</font></td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  <a name="targetname"></a>
+  </table>
+
+<script>
+  //nabbar
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("navbar").style.padding = "30px 10px";
+      document.getElementById("logo").style.fontSize = "25px";
+    } else {
+      document.getElementById("navbar").style.padding = "80px 10px";
+      document.getElementById("logo").style.fontSize = "35px";
+    }
+  }
+
+
+
+
+  // slideshow
+ 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+/* collapsibles*/
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+  </script>
+  
+
+</body>
+</html>

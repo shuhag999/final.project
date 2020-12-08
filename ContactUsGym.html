@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript Form validation</title>
+<link rel="stylesheet" href="finalProject.css">
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+</style>
+</head>
+<body>
+
+  <div id="navbar">
+    <a href="home-gym.html" id="logo">Element Fitness</a>
+    <div id="navbar-right">
+      <a class="active2" href="from2.html">join now</a>
+      <a href="ContactUsGym.html">Contact</a>
+      <a href="aboutGYM.html">About</a>
+      <a href="trainer.html">Trainer</a>
+      <a class="active" href="index.html">Home</a>
+    </div>
+  </div>
+
+      <img src="gym no pain on gain.jpeg" alt="no pain no gain"  class="center" >
+
+
+
+
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+<script>
+    //nabbar
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.padding = "30px 10px";
+        document.getElementById("logo").style.fontSize = "25px";
+      } else {
+        document.getElementById("navbar").style.padding = "80px 10px";
+        document.getElementById("logo").style.fontSize = "35px";
+      }
+    }
+    </script>
+    </div>
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9193.573471970785!2d-73.97858126113566!3d40.7599067477869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x80e1f6b49af3b615!2sGym%20on%205th!5e0!3m2!1sen!2sus!4v1607315595992!5m2!1sen!2sus" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <table border="2px" width="100%"bordercolor="skyblue" bgcolor="red">
+      <tr>
+      <th><font color="white">Designed By Shuhag Khan.</font></th>
+      <td>
+      <table border="2px" width="100%" bordercolor="#F35557">
+      <h4 align="center"><font color="white">Contact US</font></h4>
+      <tr>
+      <th rowspan="2" width="50%" align="center" ><font color="white">51th St, New York, NY 10024.</th>
+      <td width="10%" align="center" ><font color="white">email</font></td>
+      <td width="25%" align="center" ><font color="white"><a href = "mailto: shuhagk222@gmail.com">Shuhagk222@gmail.com</a></font></td>
+      </tr>
+      <tr>
+      <td width="10%" align="center" ><font color="white">phone</font></td>
+      <td width="25%" align="center" ><font color="white">347)555-5555.</font></td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      <a name="targetname"></a>
+      </table>
+    
+</body>
+
+</html>
